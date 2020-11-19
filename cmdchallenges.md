@@ -2,6 +2,8 @@
 
 [cmd challenge](https://cmdchallenge.com) 
 
+***
+
 Solution1: 
 - echo "hello world"
 
