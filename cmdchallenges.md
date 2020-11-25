@@ -75,28 +75,38 @@ Solution23:
 - sed 's/challenges are difficult//g' -i **/*.txt   
 
 Solution24:
--
+- awk '{s+=$1} END {print s}' sum-me.txt
+- awk '{s+=$1} END {printf "%.0f", s}' sum-me.txt 
+- (cat sum-me.txt | tr '\n' '+' && echo "0") | bc 
 
 Solution25:
-- 
+- find . -type f | rev | cut -f -1 -d '/' | rev
 
 Solution26:
-- 
+- find . -type f | rev | cut -d "/" -f1 | rev
 
 Solution27:
-- 
+- find -type f -exec mv {} basename \;
+- find . -type f -exec mv {} %f \;; find . -type -f
+- for f in $(find -type f); do mv $f ${f%.*}; done;
 
 Solution28:
-- 
+- find -type f -exec basename {} \; | tr " " "."
 
 Solution29:
-- 
+- find . -type f -name \*.tf -exec dirname {} \; | sort -u
 
 Solution30:
--
+- find . -type f -name '[0-9]*' | sed 's|.*/||' 
 
 Solution31:
-- 
+- head -n 25 faces.txt | tail -n 1  
+
+Solution32:
+- cat reverse-me.txt | sort | sort -r
+
+Soltion33:
+- cat faces.txt | uniq | sort | uniq  
 
 
 
